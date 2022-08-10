@@ -45,18 +45,12 @@ public class RegistrationFormPage {
 
         return this;
     }
-
     public RegistrationFormPage setFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
-    }
-    public RegistrationFormPage clearFirstName() {
-        firstNameInput.clear();
 
-        return this;
     }
-
     public RegistrationFormPage setLastName(String value) {
         lastNameInput.setValue(value);
 
