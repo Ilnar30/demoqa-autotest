@@ -24,33 +24,33 @@ public class RegistrationFormWithPageObjectsTests {
     void fillFormTest() {
 
         registrationFormPage.openPage()
-                            .setFirstName("Alexander")
-                            .setLastName("Ivanov")
-                            .setEmail("alexivanov22@mail.ru")
-                            .setGender("Male")
-                            .setNumber("8999888776")
-                            .setBirthDate("26","October","1970")
-                            .setSubjects("English")
-                            .setHobbies("Sports")
-                            .setPicture("nature.jpeg")
-                            .setCurrentAddress("Ufa")
-                            .setStateAndCity("NCR","Delhi")
-                            .setSubmit()
+                .setFirstName("Alexander")
+                .setLastName("Ivanov")
+                .setEmail("alexivanov22@mail.ru")
+                .setGender("Male")
+                .setNumber("8999888776")
+                .setBirthDate("26", "October", "1970")
+                .setSubjects("English")
+                .setHobbies("Sports")
+                .setPicture("nature.jpeg")
+                .setCurrentAddress("Ufa")
+                .setStateAndCity("NCR", "Delhi")
+                .setSubmit()
 
-                            .checkResultsModalIsVisible()
-                            .checkResult("Student Name","Alexander Ivanov")
-                            .checkResult("Student Email","alexivanov22@mail.ru")
-                            .checkResult("Gender","Male")
-                            .checkResult("Mobile","8999888776")
-                            .checkResult("Date of Birth","26 October,1970")
-                            .checkResult("Subjects","English")
-                            .checkResult("Hobbies","Sports")
-                            .checkResult("Picture","nature.jpeg")
-                            .checkResult("Address","Ufa")
-                            .checkResult("State and City","NCR Delhi");
+                .checkResultsModalIsVisible()
+                .checkResult("Student Name", "Alexander Ivanov")
+                .checkResult("Student Email", "alexivanov22@mail.ru")
+                .checkResult("Gender", "Male")
+                .checkResult("Mobile", "8999888776")
+                .checkResult("Date of Birth", "26 October,1970")
+                .checkResult("Subjects", "English")
+                .checkResult("Hobbies", "Sports")
+                .checkResult("Picture", "nature.jpeg")
+                .checkResult("Address", "Ufa")
+                .checkResult("State and City", "NCR Delhi");
+    }
 
-
-    } @Test
+    @Test
     void fillFormWithMinimumDataTest() {
 
         registrationFormPage.openPage()
@@ -61,8 +61,8 @@ public class RegistrationFormWithPageObjectsTests {
                 .setSubmit()
 
                 .checkResultsModalIsVisible()
-                .checkResult("Student Name","Alexander Ivanov")
-                .checkResult("Mobile","8999888776");
+                .checkResult("Student Name", "Alexander Ivanov")
+                .checkResult("Mobile", "8999888776");
 
     }
 }
